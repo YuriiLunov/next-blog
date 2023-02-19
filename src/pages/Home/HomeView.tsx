@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const HomeView = () => {
+function HomeView() {
   return (
     <>
       <Head>
@@ -14,6 +14,6 @@ const HomeView = () => {
       </main>
     </>
   );
-};
+}
 
 export default HomeView;

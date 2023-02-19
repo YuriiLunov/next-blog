@@ -1,5 +1,7 @@
 import HomeView from '@/src/pages/Home/HomeView';
 
-export default function Home() {
+function Home() {
   return <HomeView />;
 }
+
+export default Home;
