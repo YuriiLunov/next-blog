@@ -1,0 +1,36 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/variables";
+
+.post {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: $color-grey-800;
+  text-align: center;
+
+  a {
+    color: $color-grey-100;
+  }
+}
+
+.image {
+  width: 100%;
+  min-height: 20rem;
+  object-fit: cover;
+}
+
+.content {
+  padding: $size-4;
+
+  h3 {
+    margin: $size-2 0;
+    font-size: $size-6;
+  }
+
+  time {
+    font-style: italic;
+    color: $color-grey-300;
+  }
+
+  p {
+    line-height: $size-6;
+  }
+}
