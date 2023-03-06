@@ -1,0 +1,29 @@
+@import '@/styles/_colors.scss';
+@import '@/styles/_variables.scss';
+
+.content {
+  width: 95%;
+  max-width: 60rem;
+  margin: $size-8 auto;
+  font-size: $size-5;
+  line-height: $size-8;
+  background-color: $color-grey-100;
+  border-radius: 6px;
+  padding: $size-4;
+}
+
+.content p {
+  color: $color-grey-800
+}
+
+.content .image {
+  margin: $size-4 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: $size-8;
+  }
+}
