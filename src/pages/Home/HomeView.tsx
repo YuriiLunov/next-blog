@@ -1,5 +1,5 @@
-import Hero from '@/src/pages/Home/components/Hero';
-import FeaturedPosts from '@/src/pages/Home/components/FeaturedPosts';
+import Hero from '@/src/pages/Home/components/Hero/Hero';
+import FeaturedPosts from '@/src/pages/Home/components/FeaturedPosts/FeaturedPosts';
 import IPost from '@/src/interfaces/IPost';
 
 const MOCKED_POSTS: IPost[] = [

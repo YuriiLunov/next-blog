@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import classes from '@/src/pages/Home/scss/Hero.module.scss';
+import classes from '@/src/pages/Home/components/Hero/scss/Hero.module.scss';
 function Hero() {
   return (
     <section className={classes.hero}>
