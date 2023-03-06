@@ -1,5 +1,5 @@
 import IPost from '@/src/interfaces/IPost';
 
-export default interface IAllPostsView {
+export default interface IHome {
   posts: IPost[];
 }

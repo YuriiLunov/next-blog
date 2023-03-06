@@ -1,9 +1,9 @@
 export default interface IPost {
-  id: string;
   title: string;
-  image: string;
-  excerpt?: string;
+  content: string;
   date: string;
+  image: string;
+  excerpt: string;
   slug: string;
-  content?: string;
+  isFeatured?: boolean;
 }

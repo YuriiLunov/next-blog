@@ -1,8 +1,8 @@
 import classes from './scss/AllPostView.module.scss';
 import PostGrid from '@/src/components/PostGrid/PostGrid';
-import IAllPostsView from '@/src/pages/AllPosts/interfaces/IAllPostsView';
+import IAllPosts from '@/src/pages/AllPosts/interfaces/IAllPosts';
 
-function AllPostsView({ posts }: IAllPostsView) {
+function AllPostsView({ posts }: IAllPosts) {
   return (
     <section className={classes.posts}>
       <h1>All Posts</h1>

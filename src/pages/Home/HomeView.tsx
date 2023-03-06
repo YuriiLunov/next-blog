@@ -1,12 +1,12 @@
 import Hero from '@/src/pages/Home/components/Hero/Hero';
 import FeaturedPosts from '@/src/pages/Home/components/FeaturedPosts/FeaturedPosts';
-import { MOCKED_POSTS } from '@/src/mocks/MockedPosts';
+import IHome from '@/src/pages/Home/interfaces/IHome';
 
-function HomeView() {
+function HomeView({ posts }: IHome) {
   return (
     <>
       <Hero />
-      <FeaturedPosts posts={MOCKED_POSTS} />
+      <FeaturedPosts posts={posts} />
     </>
   );
 }

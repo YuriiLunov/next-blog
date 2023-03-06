@@ -1,8 +1,19 @@
 import AllPostsView from '@/src/pages/AllPosts/AllPostsView';
-import { MOCKED_POSTS } from '@/src/mocks/MockedPosts';
+import { getAllPosts } from '@/src/helpers/posts';
+import IAllPosts from '@/src/pages/AllPosts/interfaces/IAllPosts';
 
-function AllPosts() {
-  return <AllPostsView posts={MOCKED_POSTS} />;
+function AllPosts({ posts }: IAllPosts) {
+  return <AllPostsView posts={posts} />;
+}
+
+export function getStaticProps() {
+  const allPosts = getAllPosts();
+
+  return {
+    props: {
+      posts: allPosts,
+    },
+  };
 }
 
 export default AllPosts;
