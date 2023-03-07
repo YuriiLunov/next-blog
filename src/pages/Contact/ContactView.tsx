@@ -1,5 +1,7 @@
+import ContactForm from '@/src/pages/Contact/components/ContactForm/ContactForm';
+
 function ContactView() {
-  return <div>Contacts</div>;
+  return <ContactForm />;
 }
 
 export default ContactView;

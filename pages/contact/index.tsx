@@ -1,7 +1,7 @@
 import ContactView from '@/src/pages/Contact/ContactView';
 
-function Contact() {
+function Index() {
   return <ContactView />;
 }
 
-export default Contact;
+export default Index;
