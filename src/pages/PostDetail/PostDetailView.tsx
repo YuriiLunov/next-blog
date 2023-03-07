@@ -1,8 +1,8 @@
 import PostContent from '@/src/pages/PostDetail/components/PostContent/PostContent';
-import { MOCKED_POST } from '@/src/mocks/MockedPost';
+import IPostDetail from '@/src/pages/PostDetail/interfaces/IPostDetail';
 
-function PostDetailView() {
-  return <PostContent postData={MOCKED_POST} />;
+function PostDetailView({ post }: IPostDetail) {
+  return <PostContent postData={post} />;
 }
 
 export default PostDetailView;

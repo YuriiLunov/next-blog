@@ -5,12 +5,13 @@ import IPost from '@/src/interfaces/IPost';
 
 const postDirectory = path.join(process.cwd(), 'content/posts');
 
-const getPostData = (fileName: string) => {
-  const filePath = path.join(postDirectory, fileName);
+export const getPostsFiles = () => fs.readdirSync(postDirectory);
+
+export const getPostData = (postIdentifier: string) => {
+  const postSlug = postIdentifier.replace(/\.md$/, '');
+  const filePath = path.join(postDirectory, `${postSlug}.md`);
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(fileContent);
-
-  const postSlug = fileName.replace(/\.md$/, '');
 
   const postData: IPost = {
     title: data.title,
@@ -26,7 +27,7 @@ const getPostData = (fileName: string) => {
 };
 
 export const getAllPosts = () => {
-  const postFiles = fs.readdirSync(postDirectory);
+  const postFiles = getPostsFiles();
 
   const allPosts = postFiles.map((file) => getPostData(file));
 
