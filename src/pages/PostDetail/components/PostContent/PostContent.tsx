@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import PostHeader from '@/src/pages/PostDetail/components/PostHeader/PostHeader';
 import IPostContent from '@/src/pages/PostDetail/components/PostContent/interfaces/IPostContent';
 import TMdCustomComponents from '@/src/types/TMdCustomComponents';
@@ -26,6 +28,14 @@ function PostContent({ postData }: IPostContent) {
       } else {
         return <p>{children}</p>;
       }
+    },
+    code: ({ children, className }) => {
+      const language = /language-(\w+)/.exec(className || '')?.[1];
+      return (
+        <SyntaxHighlighter style={atomDark} language={language}>
+          {String(children).replace(/\n$/, '')}
+        </SyntaxHighlighter>
+      );
     },
   };
 
