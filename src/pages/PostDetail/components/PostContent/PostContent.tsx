@@ -15,17 +15,12 @@ function PostContent({ postData }: IPostContent) {
         node.children?.[0]?.tagName === 'img'
       ) {
         const img = node.children?.[0];
-        const src = img.properties?.src as string;
-        const alt = img.properties?.alt as string;
+        const src = `/images/posts/${postData.slug}/${img.properties?.src}`;
+        const alt = (img.properties?.alt as string) || 'post-image';
 
         return (
           <div className={classes.image}>
-            <Image
-              src={`/images/posts/${postData.slug}/${src}`}
-              alt={alt || 'post-image'}
-              width={600}
-              height={300}
-            />
+            <Image src={src} alt={alt} width={600} height={300} />
           </div>
         );
       } else {
