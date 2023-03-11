@@ -1,3 +1,3 @@
 export default interface ILayout {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }

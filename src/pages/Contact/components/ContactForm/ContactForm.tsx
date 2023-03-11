@@ -1,8 +1,8 @@
-import classes from '@/src/pages/Contact/components/ContactForm/scss/ContactForm.module.scss';
 import useContactForm from '@/src/pages/Contact/components/ContactForm/hooks/useContactForm/useContactForm';
+import classes from '@/src/pages/Contact/components/ContactForm/scss/ContactForm.module.scss';
 
 function ContactForm() {
-  const { values, setFieldValue, onSubmit } = useContactForm();
+  const { values, isLoading, setFieldValue, onSubmit } = useContactForm();
 
   return (
     <section className={classes.contact}>
@@ -17,6 +17,7 @@ function ContactForm() {
               type="email"
               id="email"
               required
+              disabled={isLoading}
             />
           </div>
           <div className={classes.control}>
@@ -27,6 +28,7 @@ function ContactForm() {
               type="text"
               id="name"
               required
+              disabled={isLoading}
             />
           </div>
         </div>
@@ -38,11 +40,14 @@ function ContactForm() {
             id="message"
             rows={5}
             required
+            disabled={isLoading}
           ></textarea>
         </div>
 
         <div className={classes.actions}>
-          <button type="submit">Send Message</button>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? 'Loading...' : 'Send Message'}
+          </button>
         </div>
       </form>
     </section>
