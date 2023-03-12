@@ -22,7 +22,7 @@ function PostContent({ postData }: IPostContent) {
 
         return (
           <div className={classes.image}>
-            <Image src={src} alt={alt} width={600} height={300} />
+            <Image src={src} alt={alt} fill />
           </div>
         );
       } else {

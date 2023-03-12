@@ -9,21 +9,31 @@
   line-height: $size-8;
   background-color: $color-grey-100;
   border-radius: 6px;
-  padding: $size-4;
-}
+  padding: $size-8;
 
-.content p {
-  color: $color-grey-800
-}
+  @media (max-width: 768px) {
+    padding: $size-4;
+  }
 
-.content .image {
-  margin: $size-4 auto;
-  width: 100%;
-  max-width: 600px;
-}
+  p {
+    color: $color-grey-800
+  }
 
-@media (min-width: 768px) {
-  .content {
-    padding: $size-8;
+  .image {
+    position: relative;
+    margin: $size-4 auto;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+
+    @media (max-width: 576px) {
+      height: 230px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center top;
+    }
+
   }
 }
