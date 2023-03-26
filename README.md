@@ -1,4 +1,4 @@
-## next-auth
+## next-blog
 A small blog project written during learning next.js
 
 [Live demo](https://next-blog-ten-gules.vercel.app/)
